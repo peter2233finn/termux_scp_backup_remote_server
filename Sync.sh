@@ -1,9 +1,16 @@
-remoteSync="/cc/"
+# Author: Peter Finn
+# https://github.com/peter2233finn/
+# remoteSync is the remote directory to backup to
+remoteSync="/directory/to/backup/to/"
+# localSync is the local directory location to be backed up. Havent tested this if it has spaces in it as of yet
 localSync="/storage/emulated/0/"
 ip="192.168.0.115"
-keyFile=".ssh/id_rsa.mainserver"
-user="sss"
-port="65003"
+# keyFile is the keyfile for SSH access
+keyFile=".ssh/id_rsa"
+# the user varable is the username for SSH 
+user="Username"
+# Port is the SSH port
+port="22"
 
 function progress(){
         printf "\r"
