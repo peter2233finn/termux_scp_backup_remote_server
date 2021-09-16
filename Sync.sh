@@ -1,16 +1,9 @@
-# Author: Peter Finn
-# https://github.com/peter2233finn/
-# remoteSync is the remote directory to backup to
-remoteSync="/directory/to/backup/to/"
-# localSync is the local directory location to be backed up. Havent tested this if it has spaces in it as of yet
+remoteSync="/cc/"
 localSync="/storage/emulated/0/"
 ip="192.168.0.115"
-# keyFile is the keyfile for SSH access
-keyFile=".ssh/id_rsa"
-# the user varable is the username for SSH 
-user="Username"
-# Port is the SSH port
-port="22"
+keyFile=".ssh/id_rsa.mainserver"
+user="sss"
+port="65003"
 
 function progress(){
         printf "\r"
@@ -106,6 +99,7 @@ for x in "${toSync[@]}"; do
 	rdir=$(echo "${remoteSync}${x}"|awk 'NF{NF-=1}1' FS='/' OFS='/'|sed 's/\/ /\//g'|sed 's/\/\//\//g')
 	progress $p $total
 	scp -P "$port" -i "$keyFile" -r "$ldir" "$user"@"$ip":"'$rdir'" 2> /dev/null > /dev/null
+	((p++))
 done
 echo "All Done!"
 
