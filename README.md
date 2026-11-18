@@ -7,5 +7,5 @@ To run, edit the script to change the ip address, ssh keyfile, port, ect.
 
 Then, to run:
 ```bash
-./Sync.sh "/path/to/remote/directory" "/path/to/local/directory"
+./Sync.sh "/path/to/local/directory" "/path/to/remote/directory" 
 ```
