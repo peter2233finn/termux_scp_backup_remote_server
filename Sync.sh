@@ -1,6 +1,5 @@
-rsync="$1"
-lsync="$2"
-
+lsync="$1"
+rsync="$2"
 
 ipAddress="192.168.x.x"
 sshKeyFile="~/.ssh/id_rsa"
