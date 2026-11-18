@@ -6,6 +6,6 @@ If you have any issues with the script, feel free to fork, commit ect.
 To run, edit the script to change the ip address, ssh keyfile, port, ect.
 
 Then, to run:
-'''
+```bash
 ./Sync.sh "/path/to/remote/directory" "/path/to/local/directory"
-'''
+```
