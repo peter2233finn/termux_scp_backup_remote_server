@@ -2,3 +2,10 @@
 
 This script will backup the device's storage to a remote server using SSH and SCP. The directory structure will also be kept identical to the local device. The private key should not have a password as multiple commands will be sent.
 If you have any issues with the script, feel free to fork, commit ect.
+
+To run, edit the script to change the ip address, ssh keyfile, port, ect.
+
+Then, to run:
+'''
+./Sync.sh "/path/to/remote/directory" "/path/to/local/directory"
+'''
